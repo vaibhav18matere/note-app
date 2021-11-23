@@ -29,14 +29,14 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
                 className="todo-input"
             />
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
-                <i>Add</i>
+                <i>Add Task</i>
             </button>
 
             <div className="select">
                 <select onChange={statusHandler} name="todos" className="filter-todo">
                     <option value="all">all</option>
-                    <option value="completed">completed</option>
-                    <option value="uncompleted">un-completed</option>
+                    <option value="completed">finishted</option>
+                    <option value="uncompleted">pending</option>
                 </select>
             </div>
         </form>
