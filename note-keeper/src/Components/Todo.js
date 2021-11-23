@@ -4,7 +4,6 @@ const Todo = ({ text, todo, todos, setTodos }) => {
 
     const deleteHandler = () => {
         setTodos(todos.filter((element) => element.id !== todo.id));
-        // console.log(todo)
     }
 
     const taskCompleteHandler = () => {
@@ -17,8 +16,6 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             }
             return item;
         }))
-
-
     }
 
     return (
