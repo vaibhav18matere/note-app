@@ -7,18 +7,32 @@ const Todo = ({ text, todo, todos, setTodos }) => {
         // console.log(todo)
     }
 
+    const taskCompleteHandler = () => {
+        setTodos(todos.map((item) => {
+            if (item.id === todo.id) {
+                return {
+                    ...item,
+                    completed: !item.completed,
+                };
+            }
+            return item;
+        }))
+
+
+    }
+
     return (
         <div className="todo">
-            <li className="todo-item"> {text}</li>
+            <li className={`todo-item ${todo.completed ? "completed" : ""}`} > {text}</li>
 
-            <button className="complete-btn">
-                <i>Edit</i>
+            <button onClick={taskCompleteHandler} className="complete-btn">
+                <i>Finish Task</i>
             </button>
 
             <button onClick={deleteHandler} className="trash-btn">
-                <i>Delete</i>
+                <i>Delete Task</i>
             </button>
-        </div>
+        </div >
     );
 };
 

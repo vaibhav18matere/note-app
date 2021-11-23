@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./App";
 import Form from "./Components/Form";
 import TodoList from "./Components/TodoList";
+import '../src/App';
 
 function App() {
 
