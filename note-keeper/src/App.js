@@ -11,6 +11,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
+
   //run once when app starts
   useEffect(() => {
     getLocalTodos();
@@ -39,6 +40,7 @@ function App() {
   const saveLocalTodos = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }
+
   //checking
   const getLocalTodos = () => {
     if (localStorage.getItem("todos") === null) {
@@ -52,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>React - To Do App </h1>
+        <h1>Notes keeper app</h1>
       </header>
       <Form
         inputText={inputText}
@@ -61,6 +63,7 @@ function App() {
         setInputText={setInputText}
         setStatus={setStatus}
       />
+
       <TodoList todos={todos}
         setTodos={setTodos}
         filteredTodos={filteredTodos}

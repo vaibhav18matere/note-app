@@ -29,7 +29,7 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             <button onClick={deleteHandler} className="trash-btn">
                 <i>Delete Task</i>
             </button>
-        </div >
+        </div>
     );
 };
 

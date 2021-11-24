@@ -2,7 +2,6 @@ import React from "react";
 
 const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     const inputTextHandler = (e) => {
-        // console.log(e.target.value);
         setInputText(e.target.value);
     };
 
@@ -16,7 +15,6 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     };
 
     const statusHandler = (e) => {
-        // console.log(e.target.value);
         setStatus(e.target.value);
     }
 
@@ -26,8 +24,8 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
                 value={inputText}
                 onChange={inputTextHandler}
                 type="text"
-                className="todo-input"
-            />
+                className="todo-input" />
+
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
                 <i>Add Task</i>
             </button>
@@ -39,6 +37,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
                     <option value="uncompleted">pending</option>
                 </select>
             </div>
+
         </form>
     );
 };
